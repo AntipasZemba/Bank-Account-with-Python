@@ -10,4 +10,9 @@ class BankAccount:
     def check_password(self, input_password):
         return self.password == input_password
 
-    def 
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print(f"Deposited ${amount}. New balane: ${self.__balance}")
+        else:
+            print("Deposit amount must be positive.")
