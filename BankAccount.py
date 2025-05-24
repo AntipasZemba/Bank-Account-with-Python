@@ -35,7 +35,7 @@ class BankAccount:
         print(f"Current balance: ${self.__balance}\n")
         print(f"Transaction history: {self.transaction_history}")
 
-accounts == {}
+accounts = {}
 
 def register():
     username = input("Choose a username: ")
