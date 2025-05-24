@@ -16,3 +16,14 @@ class BankAccount:
             print(f"Deposited ${amount}. New balane: ${self.__balance}")
         else:
             print("Deposit amount must be positive.")
+
+    def withdraw(self, amount):
+        if amount > self.__balance:
+            print("Insufficient funds.")
+        elif amount <= 0:
+            print("Withdrawal amount must be positive.")
+        else:
+            self.__balance -= amount
+            print(f"Withdrew ${amount}. New balance: ${self.__balance}")
+
+    
