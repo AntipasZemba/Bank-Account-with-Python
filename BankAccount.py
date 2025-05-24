@@ -29,4 +29,10 @@ class BankAccount:
     def get_balance(self):
         return self.__balance
 
+    def display(self):
+        print(f"\nAccount owner: {self.owner}")
+        print(f"Username: {self.__balance}")
+        print(f"Current balance: ${self.__balance}\n")
+        print(f"Transaction history: {self.transaction_history}")
+
     
