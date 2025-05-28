@@ -16,7 +16,7 @@ class BankAccount:
         # Deposit money into account
         if amount > 0:
             self.__balance += amount
-            print(f"Deposited ${amount}. New balane: ${self.__balance}")
+            print(f"Deposited ${amount}. New balance: ${self.__balance}")
         else:
             print("Deposit amount must be positive.")
 
@@ -37,7 +37,7 @@ class BankAccount:
     def display(self):
         # Display account details
         print(f"\nAccount owner: {self.owner}")
-        print(f"Username: {self.__balance}") 
+        print(f"Username: {self.__username}") 
         print(f"Current balance: ${self.__balance}\n")
         print(f"Transaction history: {self.transaction_history}") # Will populate in future update
 
@@ -104,7 +104,7 @@ def user_menu(account):
             break
         else:
             print("❌ Invalid option.")
-# Main menu for registration, login, or exiting the program
+# Menu for logged-in users to manage their accounts
 def main():
     while True:
         print("\n=== Welcome to SimpleBank ===")
