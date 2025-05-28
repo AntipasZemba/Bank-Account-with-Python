@@ -1,16 +1,19 @@
 # Define Class
 class BankAccount:
     def __init__(self, username, owner, password, balance=0):
+        # Initialized account with username, owner name, password, and optional starting balance
         self.username = username
         self.owner = owner
         self.password = password
-        self.__balance = balance
-        self.transaction_history = [] # List to store transactions
+        self.__balance = balance # Private attribute for balance
+        self.transaction_history = [] # List to store history of transactions (not used yet)
 
     def check_password(self, input_password):
+        # Check if the entered password matches the account password
         return self.password == input_password
 
     def deposit(self, amount):
+        # Deposit money into account
         if amount > 0:
             self.__balance += amount
             print(f"Deposited ${amount}. New balane: ${self.__balance}")
@@ -18,6 +21,7 @@ class BankAccount:
             print("Deposit amount must be positive.")
 
     def withdraw(self, amount):
+        # Withdraw money from account
         if amount > self.__balance:
             print("Insufficient funds.")
         elif amount <= 0:
@@ -27,6 +31,7 @@ class BankAccount:
             print(f"Withdrew ${amount}. New balance: ${self.__balance}")
 
     def get_balance(self):
+        # Return current balance (for internal use)
         return self.__balance
 
     def display(self):
