@@ -35,13 +35,16 @@ class BankAccount:
         return self.__balance
 
     def display(self):
+        # Display account details
         print(f"\nAccount owner: {self.owner}")
-        print(f"Username: {self.__balance}")
+        print(f"Username: {self.__balance}") 
         print(f"Current balance: ${self.__balance}\n")
-        print(f"Transaction history: {self.transaction_history}")
+        print(f"Transaction history: {self.transaction_history}") # Will populate in future update
 
+# Dictionary to store all registered bank accounts
 accounts = {}
 
+# Function to handle user registraction
 def register():
     username = input("Choose a username: ")
     if username in accounts:
@@ -57,6 +60,7 @@ def register():
     accounts[username] = BankAccount(username, name, password, starting_balance)
     print(f"✅ Account created for {name}!")
 
+# Function to handle user login
 def login():
     username = input("Enter username: ")
     if username in accounts:
@@ -71,6 +75,7 @@ def login():
         print("❌ Account not found.")
     return None
 
+# Menu fot logged-in users to manage their accounts
 def user_menu(account):
     while True:
         print("\n--- Account Menu ---")
@@ -99,7 +104,7 @@ def user_menu(account):
             break
         else:
             print("❌ Invalid option.")
-
+# Main menu for registration, login, or exiting the program
 def main():
     while True:
         print("\n=== Welcome to SimpleBank ===")
