@@ -44,7 +44,7 @@ class BankAccount:
 # Dictionary to store all registered bank accounts
 accounts = {}
 
-# Function to handle user registraction
+# Function to handle user registration
 def register():
     username = input("Choose a username: ")
     if username in accounts:
